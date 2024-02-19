@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: 0.3s linear;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #ff0086;
+  --second-color: #ff05887a;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  margin: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px 0 rgb(40 40 40 / 48%);
+  overflow: hidden;
+  position: relative;
+}
+
+section {
+  padding: 2rem 5%;
+}
+
+h1,
+h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 3rem;
+  font-family: "Dancing Script";
+}
+
+h2 {
+  text-align: center;
+  color: #ff0086;
+}
+
+p {
+  font-size: 1rem;
+  color: rgb(120, 119, 119);
+  text-align: left;
+  height: max-content;
+}
+
+header {
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+}
+
+header .Logo a,
+footer .Logo a {
+  font-size: 2rem;
+  color: var(--main-color);
+  font-family: "Dancing Script";
+}
+
+header nav a,
+footer nav a {
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+nav a:hover {
+  color: var(--second-color);
+}
+
+header input[type="checkbox"] {
+  display: none;
+}
+
+header .fa-bars {
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+/* Home */
+.home {
+  padding: 2rem 5%;
+  position: relative;
+  background: url(../images/home.png);
+  background-size: cover;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .home-content {
+  margin-left: 25rem;
+}
+
+.home .title .hbtn {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+.home .title .hbtn a {
+  padding: 0.65rem 1rem;
+  margin-right: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #ff0588cc;
+  width: 8rem;
+  text-align: center;
+}
+
+.home .title .hbtn a:hover {
+  background: #f5d8e1;
+  color: var(--second-color);
+  transform: scale(1.1);
+}
+
+/* About */
+#about-img {
+  float: right;
+  margin: 10px;
+  margin-left: 5rem;
+}
+
+.about-div {
+  text-align: center;
+  margin: 5rem 11rem;
+}
+
+/* Product */
+.products-content {
+  background-color: #f9b9db;
+}
+
+.products-content h2 {
+  color: white;
+  padding: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 0 5%;
+  text-align: center;
+}
+
+li {
+  float: left;
+}
+
+.products-div {
+  /* background-color: white; */
+  margin: 3rem;
+  width: 13rem;
+  height: 19rem;
+  border: 0.13rem #ff0086 solid;
+  border-radius: 1rem;
+  padding: 1rem 0;
+}
+
+.products-img {
+  width: 130px;
+  height: 170px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.add {
+  width: 1.2rem;
+  height: 1.2rem;
+  float: right;
+  margin-right: 1rem;
+}
+
+h3 {
+  color: #ff0086;
+}
+
+.price {
+  color: black;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0.5rem 1rem #f8bbd0;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+footer .icons a {
+  margin-right: 0.5rem;
+  color: var(--main-color);
+  border: 0.01rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+}
+
+footer .icons a:hover {
+  color: #fff;
+  background: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  header .fa-bars {
+    display: block;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header #toggler:checked ~ nav {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-color: #fff;
+    padding: 1rem;
+  }
+
+  header nav a {
+    margin: 0;
+    padding: 1.25rem 2.5rem;
+    display: block;
+  }
+
+  .home {
+    background-position: right;
+  }
+
+  .home .home-content {
+    margin-left: 0;
+  }
+
+  .about-div {
+    margin: 0;
+  }
+
+  ul {
+    margin-left: 1rem;
+  }
+
+  .products-div {
+    margin: 0 0.5rem 3rem;
+  }
+}
+
+.contact {
+  background-color: #f7d6e2;
+  
+  display: flex;
+  width: 100%;
+ 
+}
+.contact .container h2{
+  color: #ff0086;
+}
+  
+ .contact .container{
+  width: 100%;
+} 
+
